@@ -50,3 +50,34 @@ Redis是一个完全开源的高性能的key-value存储方式的数据库
    exists (key名) 判断这个key是否存在
     返回1有值
     返回0为空
+    
+##3.Redis支持的数据类型
+1.Redis通常被成为数据结构服务器,因为我们的value可以是
+字符串(String)
+哈希(Hash/Map)
+列表(List)
+集合(Sets)
+有序集合(Sorted sets)
+###3.2 Hash类型
+1.Redis Hash 是一个键值对集合
+2.是一个String类型的映射表 hash特别适合用于存储对象
+HMSET user name "username" password "password"
+HGETALL user
+###3.3 List类型
+1.Redis列表是简单的字符串列表,按照插入顺序排序
+LPUSH userList name1
+LPUSH userList name2
+LRANGE userList INDEX,END
+###3.4 set类型
+1.Redis的set是String类型的无序集合
+2.Redis中集中是通过哈希表实现的,所以添加,删除,查找都很简单
+SADD nameSet "name1"
+SADD nameSet "name2"
+SMEMBERS nameSet
+###3.5 sorted set类型
+1.有序集合 和set一样是String类型的集合
+2.不允许有重复的成员
+3.关联一个double类型的分数,然后通过分数来为Redis中的集合成员进行从小到大的排序
+ZADD list 1 list1
+ZADD list 2 list2
+ZRANGE list INDEX END WITHSCORES
