@@ -43,3 +43,10 @@ Redis是一个完全开源的高性能的key-value存储方式的数据库
    get (key名)  读取
    keys * 查看所有key
    del (key名) 删除
+   ttl (key名) 以秒为单位返回key的剩余时间
+    返回-1代表一直存在
+    返回-2已过期不可用
+   expire (key名) 60 设置key的过期时间为60秒,key过期后将不可用
+   exists (key名) 判断这个key是否存在
+    返回1有值
+    返回0为空
