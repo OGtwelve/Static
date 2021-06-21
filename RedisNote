@@ -1,3 +1,5 @@
+redis-cli.exe -h 127.0.0.1 -p 6379
+
 #1.什么是Redis数据库
 Redis是一个完全开源的高性能的key-value存储方式的数据库
 #2.数据库
